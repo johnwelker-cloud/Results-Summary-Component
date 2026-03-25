@@ -1,4 +1,4 @@
-# Frontend Mentor - Results summary component
+# Results Summary Component
 
 ![Design preview for the Results summary component coding challenge](./design/preview.jpg)
 
