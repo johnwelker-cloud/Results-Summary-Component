@@ -1,0 +1,154 @@
+:root {
+  --primary-gradient: linear-gradient(180deg, #7857ff, #2e2be9);
+  --bg-color: #ecf2ff;
+  --card-bg: #ffffff;
+  --text-dark: #303b5a;
+  --text-light: #8b8c9c;
+  --radius: 20px;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  overflow: hidden;
+  width: min(90%, 700px); 
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.result {
+  background: var(--primary-gradient);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  border-radius: var(--radius);
+}
+
+.result h3 {
+  color: #c7c6ff;
+  margin-bottom: 1rem;
+}
+
+.score-circle {
+  width: 140px;
+  height: 140px;
+  margin: 1.5rem auto;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.score-circle h1 {
+  font-size: 3rem;
+}
+
+.score-circle span {
+  font-size: 0.9rem;
+  color: #c7c6ff;
+}
+
+.result p {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  color: #e0e0ff;
+}
+
+.summary {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.summary h3 {
+  color: var(--text-dark);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.row span:first-child {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.reaction {
+  background: rgba(255, 87, 87, 0.1);
+  color: #ff5757;
+}
+
+.memory {
+  background: rgba(255, 176, 31, 0.1);
+  color: #ffb01f;
+}
+
+.verbal {
+  background: rgba(0, 189, 145, 0.1);
+  color: #00bd91;
+}
+
+.visual {
+  background: rgba(17, 37, 212, 0.1);
+  color: #1125d4;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 30px;
+  background: var(--text-dark);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #7857ff, #2e2be9);
+}
+
+button:focus {
+  outline: 3px solid #7857ff;
+  outline-offset: 3px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .result,
+  .summary {
+    flex: 1;
+  }
+
+  .result {
+    border-radius: var(--radius);
+  }
+}
